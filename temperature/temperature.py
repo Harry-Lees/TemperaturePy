@@ -41,15 +41,15 @@ class Temperature:
 
     @classmethod
     def fromfarenheit(cls, temp: Real) -> Temperature:
-        return cls(temp)
+        return cls(Temperature.ftok(temp))
 
     @classmethod
     def fromcelsius(cls, temp: Real) -> Temperature:
-        return cls(temp)
+        return cls(Temperature.ctok(temp))
 
     @classmethod
     def fromrankine(cls, temp: Real) -> Temperature:
-        return cls(temp)
+        return cls(Temperature.rtok(temp))
 
     @property
     def kelvin(self) -> Real:
@@ -135,3 +135,13 @@ class Temperature:
     def ctof(c: Real) -> Real:
         '''convert Celsius to Farenheit'''
         return 1.8 * c + 32
+
+    @staticmethod
+    def ctor(c: Real) -> Real:
+        '''convert Celsius to Rankine'''
+        return c * 9/5 + 491.67
+
+    @staticmethod
+    def rtoc(r: Real) -> Real:
+        '''convert Rankine to Celsius'''
+        return (r - 491.67) * 5/9
