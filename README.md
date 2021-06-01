@@ -3,6 +3,14 @@
 
 A Simple temperature conversion library for Python 3.
 
+## Installation
+
+This package is available for download on PyPi
+
+```python
+python3 -m pip install temperaturepy
+```
+
 ## Examples
 
 Easy Conversions
@@ -30,6 +38,8 @@ Clamped to real bounds
 >> impossible = Temperature(-1)
 ValueError: Temperature cannot be below Absolute Zero
 ```
+
+For more examples, please see the examples folder.
 
 ## License
 
