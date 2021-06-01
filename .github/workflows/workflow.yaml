@@ -18,7 +18,7 @@ jobs:
           python -m pip install mypy pytest
       - name: Type Check
         run: |
-          mypy temperature.py
+          mypy temperature/
       - name: Unit Test
         run: |
           pytest tests.py
