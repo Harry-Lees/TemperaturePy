@@ -21,4 +21,4 @@ jobs:
           mypy temperature.py
       - name: Unit Test
         run: |
-          pytest
+          pytest tests.py
