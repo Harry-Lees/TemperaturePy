@@ -24,19 +24,22 @@ class Temperature:
     def __repr__(self) -> str:
         return f'Temperature(kelvin={round(self.kelvin, 2)}, celsius={round(self.celsius, 2)}, farenheit={round(self.farenheit, 2)}, rankine={round(self.rankine, 2)})'
 
-    def __eq__(self, other) -> bool:
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, Temperature):
+            return NotImplemented
+
         return self._t == other._t
 
-    def __lt__(self, other) -> bool:
+    def __lt__(self, other: Temperature) -> bool:
         return self._t < other._t
 
-    def __add__(self, other) -> Temperature:
+    def __add__(self, other: Temperature) -> Temperature:
         return Temperature(self._t + other._t)
 
-    def __sub__(self, other) -> Temperature:
+    def __sub__(self, other: Temperature) -> Temperature:
         return Temperature(self._t - other._t)
 
-    def __mul__(self, other) -> Temperature:
+    def __mul__(self, other: Temperature) -> Temperature:
         return Temperature(self._t * other._t)
 
     @classmethod
