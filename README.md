@@ -1,5 +1,6 @@
 # TemperaturePy
 ![Workflow](https://github.com/Harry-Lees/TemperaturePy/actions/workflows/workflow.yaml/badge.svg)
+[![Downloads](https://pepy.tech/badge/temperaturepy)](https://pepy.tech/project/temperaturepy)
 
 A Simple temperature conversion library for Python 3.
 
